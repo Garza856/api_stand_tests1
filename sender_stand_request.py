@@ -16,20 +16,6 @@ authorization = {
     "Authorization": f'Bearer {auth_token}'
 }
 
-
-def get_logs(count=20):
-   return requests.get(configuration.URL_SERVICE + configuration.LOG_MAIN_PATH,
-                        params={"count": count})
-
-
-
-
-def get_users_table():
-    return requests.get(configuration.URL_SERVICE + configuration.USER_TABLE_PATH)
-
-
-
-
 def post_products_kits(products_ids):
     # Realiza una solicitud POST para buscar kits por productos.
     return requests.post(configuration.URL_SERVICE + configuration.PRODUCTS_KITS_PATH,  # Concatenación de URL base y ruta.
